@@ -1,5 +1,6 @@
 package com.masagreen.aidemo.controllers;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -63,4 +64,6 @@ public class EmbeddingController {
         var user = new UserMessage(q);
         return chatClient.call(new Prompt(List.of(system, user))).getResult().getOutput().getContent();
     }
+
+      
 }
